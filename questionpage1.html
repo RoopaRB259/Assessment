@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".que1").hide();
+      $(".que2").hide();
+      $(".que3").hide();
+      $(".que4").hide();
+      $(".que5").hide();
+      $(".que6").hide();
+      $(".que7").hide();
+      $(".que8").hide();
+      $(".que9").hide();
+      $(".que10").hide();
+
+      var array = [];
+      var count = 0;
+      $("#q1").click(function () {
+        $(".que1").slideDown(1000);
+      });
+      $("#q2").click(function () {
+        $(".que2").slideDown(1000);
+      });
+      $("#q3").click(function () {
+        $(".que3").slideDown(1000);
+      });
+      $("#q4").click(function () {
+        $(".que4").slideDown(1000);
+      });
+      $("#q5").click(function () {
+        $(".que5").slideDown(1000);
+      });
+      $("#q6").click(function () {
+        $(".que6").slideDown(1000);
+      });
+      $("#q7").click(function () {
+        $(".que7").slideDown(1000);
+      });
+      $("#q8").click(function () {
+        $(".que8").slideDown(1000);
+      });
+      $("#q9").click(function () {
+        $(".que9").slideDown(1000);
+      });
+      $("#q10").click(function () {
+        $(".que10").slideDown(1000);
+      });
+
+      $(".question1 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question2 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question3 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question4 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question5 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question6 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question7 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question8 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question9 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+      $(".question10 li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+
+      $("#btnSubmit1").click(function () {
+        $(".question1 li.active").each(function () {
+          array.push($(this).text());
+          $(".que1").slideUp(1000);
+
+          if ($(this).text() === "HyperText mark up language") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit2").click(function () {
+        $(".question2 li.active").each(function () {
+          array.push($(this).text());
+          $(".que2").slideUp(1000);
+
+          if ($(this).text() === "cascading style sheets") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit3").click(function () {
+        $(".question3 li.active").each(function () {
+          array.push($(this).text());
+          $(".que3").slideUp(1000);
+
+          if ($(this).text() === ">John Resig in 2006") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit4").click(function () {
+        $(".question4 li.active").each(function () {
+          array.push($(this).text());
+          $(".que4").slideUp(1000);
+
+          if ($(this).text() === "compliment to javascript") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit5").click(function () {
+        $(".question5 li.active").each(function () {
+          array.push($(this).text());
+          $(".que5").slideUp(1000);
+
+          if ($(this).text() === "library") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit6").click(function () {
+        $(".question6 li.active").each(function () {
+          array.push($(this).text());
+          $(".que6").slideUp(1000);
+
+          if ($(this).text() === "Responsive website") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit7").click(function () {
+        $(".question7 li.active").each(function () {
+          array.push($(this).text());
+          $(".que7").slideUp(1000);
+
+          if ($(this).text() === "Head and body") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit8").click(function () {
+        $(".question8 li.active").each(function () {
+          array.push($(this).text());
+          $(".que8").slideUp(1000);
+
+          if ($(this).text() === "id,class") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit9").click(function () {
+        $(".question9 li.active").each(function () {
+          array.push($(this).text());
+          $(".que9").slideUp(1000);
+
+          if ($(this).text() === "UI library") {
+            count++;
+          }
+        })
+      });
+      $("#btnSubmit10").click(function () {
+        $(".question10 li.active").each(function () {
+          array.push($(this).text());
+          $(".que10").slideUp(1000);
+
+          if ($(this).text() === "Frame work") {
+            count++;
+          }
+        })
+        // console.log(array);
+        // console.log(count);
+      });
+      $("#btnSave1").click(function () {
+        $(".question1 li.active").each(function () {
+          $(".que1").slideUp(1000);
+          $("#q1").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave2").click(function () {
+        $(".question2 li.active").each(function () {
+          $(".que2").slideUp(1000);
+          $("#q2").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave3").click(function () {
+        $(".question3 li.active").each(function () {
+          $(".que3").slideUp(1000);
+          $("#q3").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave4").click(function () {
+        $(".question4 li.active").each(function () {
+          $(".que4").slideUp(1000);
+          $("#q4").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave5").click(function () {
+        $(".question5 li.active").each(function () {
+          $(".que5").slideUp(1000);
+          $("#q5").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave6").click(function () {
+        $(".question6 li.active").each(function () {
+          $(".que6").slideUp(1000);
+          $("#q6").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave7").click(function () {
+        $(".question7 li.active").each(function () {
+          $(".que7").slideUp(1000);
+          $("#q7").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave8").click(function () {
+        $(".question8 li.active").each(function () {
+          $(".que8").slideUp(1000);
+          $("#q8").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave9").click(function () {
+        $(".question9 li.active").each(function () {
+          $(".que9").slideUp(1000);
+          $("#q9").css({ border: "2px solid orange" });
+        });
+      });
+      $("#btnSave10").click(function () {
+        $(".question10 li.active").each(function () {
+          $(".que10").slideUp(1000);
+          $("#q10").css({ border: "2px solid orange" });
+        });
+      });
+      $("#score").click(function score() {
+        if (array.length !== 10) {
+          alert("your not answerd all question check once");
+          window.location.href = "home.html";
+
+        } else {
+          $("#finalscore").text("Your Total Score is :" + count + "/10");
+          alert(count + "/10");
+        }
+      });
+
+    });
+  </script>
+  <style>
+    ol li {
+      font-size: 15px;
+      padding-top: 10px;
+      list-style-position: inside;
+      list-style-type: none;
+      border: 1px solid black;
+      width: 250px;
+    }
+
+    .active {
+      background-color: rgb(143, 145, 250);
+    }
+  </style>
+</head>
+
+<body>
+  <h3 style="background-color:green;color:white;text-align: center;">Web development Test</h3>
+  <div id="main" style="border: 2px solid blueviolet;">
+    <div>
+      <div id="q1">
+        <h3>Question 1</h3>
+      </div>
+      <div class="que1">
+        <h3> 1.What is HTML means for ?</h3>
+        <ol class="question1">
+          <li>HyperText mark up language</li>
+          <li>Mark up language</li>
+          <li>language of head</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit1" />
+        <input type="button" value="save" id="btnSave1" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q2">
+        <h3>Question 2</h3>
+      </div>
+      <div class="que2">
+        <h3> 2.what is CSS stand for ?</h3>
+        <ol class="question2">
+          <li>cascading style sheets</li>
+          <li>computer style sheet</li>
+          <li>Style sheets</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit2" />
+        <input type="button" value="save" id="btnSave2" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q3">
+        <h3>Question 3</h3>
+      </div>
+      <div class="que3">
+        <h3> 3.Who developed jquery and when ?</h3>
+        <ol class="question3">
+          <li>John Richard in 2001</li>
+          <li>Mark Bensman in 2004</li>
+          <li>John Resig in 2006</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit3" />
+        <input type="button" value="save" id="btnSave3" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q4">
+        <h3>Question 4</h3>
+      </div>
+      <div class="que4">
+        <h3> 4.What is jquery ?</h3>
+        <ol class="question4">
+          <li>compliment to javascript</li>
+          <li>replacement to java script</li>
+          <li>java version</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit4" />
+        <input type="button" value="save" id="btnSave4" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q5">
+        <h3>Question 5</h3>
+      </div>
+      <div class="que5">
+        <h3>5.JavaScript is a</h3>
+        <ol class="question5">
+          <li>library</li>
+          <li>extended java</li>
+          <li>extended c</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit5" />
+        <input type="button" value="save" id="btnSave5" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q6">
+        <h3>Question 6</h3>
+      </div>
+      <div class="que6">
+        <h3>6.what is bootstrap used for ?</h3>
+        <ol class="question6">
+          <li>Responsive website</li>
+          <li>styling a web page</li>
+          <li>reactive webpage</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit6" />
+        <input type="button" value="save" id="btnSave6" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q7">
+        <h3>Question 7</h3>
+      </div>
+      <div class="que7">
+        <h3>7.The main content of html are ?</h3>
+        <ol class="question7">
+          <li>Head and body</li>
+          <li>div and p tag</li>
+          <li>span and mark</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit7" />
+        <input type="button" value="save" id="btnSave7" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q8">
+        <h3>Question 8</h3>
+      </div>
+      <div class="que8">
+        <h3>8.selectors types are</h3>
+        <ol class="question8">
+          <li>id,class</li>
+          <li>java,python</li>
+          <li>react,angular</li>
+          <li>None of the above</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit8" />
+        <input type="button" value="save" id="btnSave8" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q9">
+        <h3>Question 9</h3>
+      </div>
+      <div class="que9">
+        <h3>9.React js is </h3>
+        <ol class="question9">
+          <li>UI library</li>
+          <li>frame work</li>
+          <li>document </li>
+          <li>extended version of java</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit9" />
+        <input type="button" value="save" id="btnSave9" />
+      </div>
+    </div>
+    <hr />
+    <div>
+      <div id="q10">
+        <h3>Question 10</h3>
+      </div>
+      <div class="que10">
+        <h3>10. Angular is one one below ? </h3>
+        <ol class="question10">
+          <li>Frame work</li>
+          <li>library</li>
+          <li>programming language</li>
+          <li>scripting language</li>
+        </ol>
+        <input type="button" value="submit" id="btnSubmit10" />
+        <input type="button" value="save" id="btnSave10" />
+      </div>
+    </div>
+    <hr />
+    <br />
+    <div style="text-align: center;">
+      <input style="background-color: rgb(124, 194, 55);color:black" type="submit" name="score" id="score" value="Score"
+        onclick="return score();" />
+    </div>
+    <div>
+      <div style="margin-top: 15px;">
+        <div><span id="finalscore" style="color:aqua"></span></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
